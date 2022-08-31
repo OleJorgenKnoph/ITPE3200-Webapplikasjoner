@@ -1,26 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using KundeApp1.Models;
+using API1.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace KundeApp1.Controllers
+namespace API1.Controllers
 {
     [Route("[Controller]/[action]")]
-    public class Kunde_controller : ControllerBase
+    public class KundeController : ControllerBase
     {
-
         public List<Kunde> HentAlle()
         {
             var kundene = new List<Kunde>();
 
             var kunde1 = new Kunde();
             kunde1.navn = "Ole Hansen";
-            kunde1.adresse = "Haneborgveien 32";
+            kunde1.adresse = "Osloveien 1";
 
             var kunde2 = new Kunde
             {
-                navn = "Line Hansen",
-                adresse = "Osloveien 69"
+                navn = "Line Olsen",
+                adresse = "Karl Johan 69"
             };
 
             kundene.Add(kunde1);
