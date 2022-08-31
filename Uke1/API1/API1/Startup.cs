@@ -40,7 +40,9 @@ namespace API1
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            app.UseStaticFiles();
+
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
