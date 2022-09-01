@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Endre kunde</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/endre.js"></script>
+</head>
+<body>
+    <h3 class="m-2">Endre kundeopplysninger</h3>
+
+    <div class="container m-3">
+
+        <input type="text" id="id" hidden />
+
+        <div class="form-group">
+            <label for="navnInput" class="h5">Navn</label>
+            <input type="text" id="navnInput" class="form-control col-sm-3" placeholder="Skriv inn navn…" />
+        </div>
+        <div class="form-group">
+            <label for="adrInput" class="h5">Adresse</label>
+            <input type="text" id="adrInput" class="form-control col-sm-4" placeholder="Skriv inn din adresse…" />
+        </div>
+
+        <button class="btn btn-primary" onclick="endreKunde()">Endre kunde</button>
+
+        <div id="feil"></div>
+    </div>
+</body>
+</html>
