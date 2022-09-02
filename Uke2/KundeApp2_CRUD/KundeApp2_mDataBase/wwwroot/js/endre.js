@@ -11,23 +11,25 @@
     });
 });
 
-function lagreKunden() {
+function endreKunde() {
     const innKunde = {
         id: ("#id").val(),
         navn: $("#navnInput").val(),
         adresse: $("#adrInput").val()
     }
 
+    console.table(innKunde);
+    console.log(innKunde.id);
+
     $.put("Kunde/oppdaterKunde", innKunde, function (OK) {
         if (OK) {
             window.location.href = "index.html";
         }
         else {
-            $("#feil").html="Feil i DB"
+            $("#feil").html = "Feil i DB";
         }
     })
-}
-
+};
 
 
 
