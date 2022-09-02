@@ -13,15 +13,12 @@
 
 function endreKunde() {
     const innKunde = {
-        id: ("#id").val(),
+        id: $("#id").val(),
         navn: $("#navnInput").val(),
         adresse: $("#adrInput").val()
     }
 
-    console.table(innKunde);
-    console.log(innKunde.id);
-
-    $.put("Kunde/oppdaterKunde", innKunde, function (OK) {
+    $.post("Kunde/oppdaterKunde", innKunde, function (OK) {
         if (OK) {
             window.location.href = "index.html";
         }
