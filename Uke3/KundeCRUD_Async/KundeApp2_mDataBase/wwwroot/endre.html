@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Endre kunde</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/endre.js"></script>
+</head>
+<body>
+    <h3 class="m-2">Endre kundeopplysninger</h3>
+
+    <div class="container m-3">
+
+        <input type="text" id="id" hidden />
+
+        <div class="form-group">
+            <label for="forNavnInput" class="h5">Fornavn</label>
+            <input type="text" id="forNavnInput" class="form-control col-sm-3" placeholder="Skriv inn fornavn…" />
+        </div>
+        <div class="form-group">
+            <label for="etterNavnInput" class="h5">Etternavn</label>
+            <input type="text" id="etterNavnInput" class="form-control col-sm-4" placeholder="Skriv inn din etternavn…" />
+        </div>
+        <div class="form-group">
+            <label for="adrInput" class="h5">Adresse</label>
+            <input type="text" id="adrInput" class="form-control col-sm-4" placeholder="Skriv inn din adresse…" />
+        </div>
+        <div class="form-group">
+            <label for="postNrInput" class="h5">Postnummer</label>
+            <input type="text" id="postNrInput" class="form-control col-sm-4" placeholder="Skriv inn din postnr…" />
+        </div>
+        <div class="form-group">
+            <label for="postStedInput" class="h5">Poststed</label>
+            <input type="text" id="postStedInput" class="form-control col-sm-4" placeholder="Skriv inn ditt poststed…" />
+        </div>
+
+        <button class="btn btn-primary" onclick="endreKunde()">Endre kunde</button>
+
+        <div id="feil"></div>
+    </div>
+</body>
+</html>
