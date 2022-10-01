@@ -9,6 +9,7 @@ $(function () {
 
 function hentAlleKunder() {
     $.get("Kunde/HentAlle", function (kunder) {
+       
         formaterKunder(kunder);
     });
 }
@@ -18,7 +19,7 @@ function formaterKunder(kunder) {
     let ut =
         "<table class='table table-striped'>" +
         "<tr>" +
-        "<th>Navn</th>" + "<th>Adresse</th> <th></th> <th></th>" +
+        "<th>Fornavn</th> <th>Etternavn</th> <th>Adresse</th> <th>Postnummer</th> <th>Poststed</th> <th></th> <th></th>" +
         "</tr>";
 
     for (let kunde of kunder) {
@@ -27,8 +28,8 @@ function formaterKunder(kunder) {
                 "<td>" + kunde.etterNavn + "</td>" +
                 "<td>" + kunde.adresse + "</td>" +
                 "<td>" + kunde.postNr + "</td>" +
-                "<td>" + kunde.poststed + "</td>" +
-                "<td> <a href='endre.html?id="+kunde.id+"' class='btn btn-outline-secondary'> Endre opplysninger </a> </td>" +
+                "<td>" + kunde.postSted + "</td>" +
+                "<td> <a href='endre.html?id=" + kunde.id + "' class='btn btn-outline-secondary'> Endre opplysninger </a> </td>" +
                 "<td> <button class='btn btn-outline-danger' onclick='slettKunde(" + kunde.id +")'> Slett </button> </td>" +
             "</tr>";
     }

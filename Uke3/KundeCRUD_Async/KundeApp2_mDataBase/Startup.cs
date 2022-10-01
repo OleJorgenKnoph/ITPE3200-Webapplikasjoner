@@ -37,6 +37,7 @@ namespace KundeApp2_mDataBase
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                DbInit.Initialize(app);
             }
 
             app.UseHttpsRedirection();
